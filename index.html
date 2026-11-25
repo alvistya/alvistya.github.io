@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alvi Setya Kurnia Dewi</title>
+<meta name="description" content="Website personal Alvi Setya Kurnia Dewi: pengalaman, proyek, pencapaian, dan pendidikan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: manis, feminin, rapi; seperti jurnal pribadi yang dihias dengan sayang
+   IDEA: scrapbook pastel: polaroid bertempel washi tape, stiker bunga, catatan tulisan tangan, kartu pos
+   PICTURE: foto wisuda sebagai polaroid miring dengan selotip, dikelilingi stiker bunga, hati, dan bintang
+   COLOUR and TYPE: blush, lilac, butter, mint, sky di atas latar merah muda pucat; tinta plum; Playfair Display + Caveat + Plus Jakarta Sans
+   LAYOUT: hero polaroid, tentang (kertas bergaris + stiker), pengalaman (linimasa zig-zag), proyek, pencapaian, pendidikan (kartu lengkung), kontak (kartu pos) */
+:root{color-scheme:light dark;
+  --bg:light-dark(#fff6f9,#1b1022);
+  --paper:light-dark(#ffffff,#26172e);
+  --ink:light-dark(#3d2148,#fbeef6);
+  --mute:light-dark(#7d6585,#cbb6d2);
+  --line:light-dark(#f6dbe7,#3d2a49);
+  --rose:light-dark(#ec4f8b,#ff86b4);  --rose-s:light-dark(#ffe1ec,#3e1f38);
+  --lilac:light-dark(#8a62f0,#b39bff); --lilac-s:light-dark(#efe8ff,#2c2249);
+  --butter:light-dark(#d99a00,#ffd36b);--butter-s:light-dark(#fff3cc,#3a301a);
+  --mint:light-dark(#12a07a,#59dcb3);  --mint-s:light-dark(#dcf7ee,#163631);
+  --sky:light-dark(#3a8ee8,#86bdff);   --sky-s:light-dark(#ddedff,#192b45);
+  --peach:light-dark(#ef7a4f,#ffab8a); --peach-s:light-dark(#ffe6da,#3b2421);
+  --shadow:light-dark(rgba(150,50,100,.16),rgba(0,0,0,.5))}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;color:var(--ink);font:16.5px/1.7 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:clip;
+  background:var(--bg) radial-gradient(color-mix(in srgb,var(--rose) 16%,transparent) 1.2px,transparent 1.3px) 0 0/26px 26px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,4.4vw,50px)}
+h3{font-size:clamp(19px,1.9vw,22px)}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1140px;margin:0 auto}
+.band{position:relative;padding:clamp(60px,8vw,110px) max(5vw,18px)}
+.hand{font-family:Caveat,cursive;font-weight:700;line-height:1}
+.sec-head{margin-bottom:clamp(30px,4vw,52px)}
+.sec-head .hand{display:block;margin-bottom:10px!important;font-size:clamp(26px,2.6vw,32px);color:var(--rose);transform:rotate(-2deg);margin-bottom:6px}
+.sec-head h2 span{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--c,var(--rose)) 30%,transparent) 62%);padding:0 4px}
+.center{text-align:center}
+.st{position:absolute;pointer-events:none}
+@keyframes float{50%{transform:translateY(-10px) rotate(8deg)}}
+.fl{animation:float 6s ease-in-out infinite}.fl.d2{animation-delay:-2s}.fl.d3{animation-delay:-4s}
+@media (prefers-reduced-motion:reduce){.fl{animation:none}html{scroll-behavior:auto}.lift{transition:none}}
+.wave{display:block;width:100%;height:60px}
+
+/* navigasi */
+nav{position:sticky;top:12px;z-index:9;padding:0 max(3vw,12px)}
+nav .in{max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2px 14px;padding:4px 8px 4px 22px;border-radius:999px;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(14px);box-shadow:0 10px 30px -14px var(--shadow);border:1.5px solid var(--line)}
+.mark{display:flex;align-items:center;gap:6px;font-family:Caveat,cursive;font-weight:700;font-size:30px;text-decoration:none;min-height:46px;color:var(--rose)}
+.mark svg{width:18px;height:18px}
+nav ul{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+nav ul a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14.5px;color:var(--mute)}
+nav ul a:hover{background:var(--rose-s);color:var(--rose)}
+
+/* hero */
+.hero{margin-top:-70px;padding-top:clamp(130px,13vw,170px);padding-bottom:40px;overflow:hidden;background:
+  radial-gradient(40% 50% at 92% 30%,color-mix(in srgb,var(--lilac) 26%,transparent),transparent 70%),
+  radial-gradient(36% 48% at 0% 70%,color-mix(in srgb,var(--rose) 22%,transparent),transparent 70%),
+  radial-gradient(30% 40% at 45% 0%,color-mix(in srgb,var(--butter) 24%,transparent),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px,6vw,80px);align-items:center}
+.hi{font-size:clamp(36px,4vw,46px);color:var(--rose);display:inline-block;transform:rotate(-4deg);margin-bottom:10px}
+.hero h1{font-size:clamp(48px,7vw,88px);letter-spacing:-.01em;line-height:1.02}
+.hero h1 em{display:block;font-weight:500;color:var(--lilac)}
+.note{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 18px;border-radius:16px;background:var(--butter-s);transform:rotate(-1.5deg);box-shadow:0 8px 20px -12px var(--shadow)}
+.note .hand{font-size:24px;color:var(--ink)}
+.note svg{width:22px;height:22px;flex:none}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;text-decoration:none}
+.lift{transition:transform .2s}.lift:hover{transform:translateY(-3px)}
+.btn.main{background:linear-gradient(135deg,var(--rose),var(--lilac));color:#fff;box-shadow:0 14px 28px -12px var(--rose)}
+.btn.soft{background:var(--paper);border:1.5px solid var(--line)}
+.btn svg{width:20px;height:20px}
+.pola-box{position:relative;justify-self:center;width:min(100%,380px);padding:10px}
+.blob{position:absolute;inset:-6% -10% -2% -8%;background:linear-gradient(140deg,var(--rose-s),var(--lilac-s) 55%,var(--sky-s));border-radius:58% 42% 55% 45%/48% 55% 45% 52%}
+.pola{position:relative;background:#fff;padding:14px 14px 0;border-radius:6px;box-shadow:0 30px 50px -24px var(--shadow),0 2px 6px rgba(0,0,0,.06);transform:rotate(3deg)}
+.pola img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%;border-radius:2px}
+.pola .cap{font-family:Caveat,cursive;font-weight:700;font-size:28px;color:#3d2148;text-align:center;padding:12px 0 16px}
+.tape{position:absolute;width:110px;height:32px;opacity:.85;background:repeating-linear-gradient(45deg,rgba(255,255,255,.45) 0 6px,transparent 6px 12px),var(--c)}
+.tape.t1{--c:#ffb3cf;top:-14px;left:-24px;transform:rotate(-28deg)}
+.tape.t2{--c:#c9b6ff;top:-12px;right:-26px;transform:rotate(32deg)}
+
+/* quote */
+.quote-band{padding-top:clamp(30px,5vw,60px);padding-bottom:clamp(30px,5vw,60px)}
+.quote{position:relative;max-width:860px;margin:0 auto;padding:clamp(40px,5vw,60px) clamp(28px,6vw,80px) clamp(30px,4vw,44px);border-radius:28px;text-align:center;
+  background:linear-gradient(135deg,var(--rose-s),var(--lilac-s) 60%,var(--sky-s));box-shadow:0 26px 50px -30px var(--shadow);transform:rotate(-.6deg)}
+.quote .tape{width:96px;height:28px}.quote .tape.t1{top:-12px;left:30px;transform:rotate(-8deg)}.quote .tape.t2{top:-12px;right:30px;left:auto;transform:rotate(9deg)}
+.qmark{position:absolute;left:50%;top:-34px;transform:translateX(-50%);width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:var(--rose);color:#fff;font-family:"Playfair Display",serif;font-size:64px;line-height:1;padding-top:22px;box-shadow:0 12px 24px -10px var(--rose)}
+.quote blockquote{margin:0;font-family:"Playfair Display",serif;font-style:italic;font-weight:500;font-size:clamp(21px,2.6vw,30px);line-height:1.45;text-wrap:balance}
+.quote figcaption{margin-top:18px}
+.quote figcaption .hand{font-size:30px;color:var(--rose)}
+.quote figcaption .hand::before{content:"— "}
+
+/* tentang */
+.about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:start}
+.paper{position:relative;padding:clamp(26px,3.5vw,40px);padding-left:clamp(40px,5vw,60px);border-radius:24px;background:var(--paper);box-shadow:0 24px 50px -30px var(--shadow);
+  background-image:linear-gradient(90deg,transparent clamp(24px,3.4vw,40px),color-mix(in srgb,var(--rose) 35%,transparent) 0,color-mix(in srgb,var(--rose) 35%,transparent) calc(clamp(24px,3.4vw,40px) + 2px),transparent 0),repeating-linear-gradient(transparent 0 33px,var(--line) 33px 34px)}
+.paper p{font-size:17px;line-height:34px;margin:0 0 34px}
+.paper p:last-child{margin:0}
+.paper p:first-child{font-family:"Playfair Display",serif;font-size:clamp(20px,2vw,23px)}
+.stickers{display:grid;gap:16px;padding-top:6px}
+.stk{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:22px;background:var(--cs);box-shadow:0 12px 24px -18px var(--shadow);border:2px dashed color-mix(in srgb,var(--c) 40%,transparent)}
+.stk:nth-child(odd){transform:rotate(-1.4deg)}.stk:nth-child(even){transform:rotate(1.2deg)}
+.stk i{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--paper);color:var(--c)}
+.stk i svg{width:22px;height:22px}
+.stk small{display:block;font-size:13px;font-weight:600;color:var(--c)}
+.stk b{display:block;line-height:1.35}
+
+/* pengalaman */
+.tl{position:relative;list-style:none;margin:0;padding:0}
+.tl::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:repeating-linear-gradient(var(--rose) 0 10px,transparent 10px 18px);opacity:.5}
+.tl>li{position:relative;width:50%;padding:0 44px 34px 0}
+.tl>li:nth-child(even){margin-left:50%;padding:0 0 34px 44px}
+.tl>li::before{content:"";position:absolute;top:26px;right:-11px;width:22px;height:22px;border-radius:50%;background:var(--c);border:5px solid var(--bg);box-shadow:0 0 0 2px var(--c)}
+.tl>li:nth-child(even)::before{right:auto;left:-11px}
+.card{padding:24px 26px;border-radius:24px;background:var(--paper);box-shadow:0 20px 40px -28px var(--shadow);border-top:5px solid var(--c)}
+.date{font-family:Caveat,cursive;font-weight:700;font-size:24px;color:var(--c);line-height:1}
+.card h3{margin-top:8px}
+.org{font-weight:600;color:var(--c);font-size:14.5px;margin:6px 0 10px}
+.card p{color:var(--mute);margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0}
+.tags li{font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:999px;background:var(--cs);color:var(--c)}
+
+/* proyek */
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pj{border-radius:28px;background:var(--paper);overflow:hidden;box-shadow:0 24px 46px -30px var(--shadow)}
+.pj .art{position:relative;aspect-ratio:16/10;display:grid;place-items:center;background:linear-gradient(150deg,var(--cs),color-mix(in srgb,var(--c) 22%,var(--paper)))}
+.pj .art svg{width:60%;height:auto}
+.pj .body{padding:22px 26px 28px}
+.pj .kind{font-size:14px;font-weight:700;color:var(--c);margin:6px 0 10px}
+.pj p{color:var(--mute);margin:0}
+.when{font-family:Caveat,cursive;font-weight:700;font-size:22px;color:var(--c);line-height:1}
+.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.mini{display:flex;gap:14px;padding:20px;border-radius:24px;background:var(--cs)}
+.mini i{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--paper);color:var(--c)}
+.mini i svg{width:21px;height:21px}
+.mini h3{font-size:18px;margin-top:4px}
+.mini p{margin:6px 0 0;font-size:14.5px;opacity:.8}
+.mini .tags li{background:var(--paper)}
+
+/* pencapaian */
+.wins{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.win{position:relative;padding:18px 18px 22px;border-radius:26px;background:var(--paper);text-align:center;box-shadow:0 20px 40px -28px var(--shadow)}
+.medal{display:none;width:70px;height:70px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--cs);color:var(--c);box-shadow:inset 0 0 0 5px var(--paper),0 0 0 3px var(--cs)}
+.medal svg{width:30px;height:30px}
+.win b{display:block;font-family:"Playfair Display",serif;font-size:22px;font-weight:600;color:var(--c)}
+.win span{display:block;margin-top:6px;font-size:14.5px;color:var(--mute);line-height:1.5}
+.certs-h{display:block;font-size:30px;color:var(--lilac);margin:clamp(34px,4vw,48px) 0 14px;transform:rotate(-1.5deg)}
+.certs{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.certs li{padding:10px 16px;border-radius:14px;background:var(--cs);font-weight:600;font-size:14.5px;line-height:1.35;border:1.5px solid color-mix(in srgb,var(--c) 25%,transparent)}
+.certs small{display:block;font-size:12.5px;font-weight:700;color:var(--c)}
+
+/* pendidikan */
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:0;padding:0;align-items:end}
+.arch{position:relative;padding:44px 26px 30px;border-radius:999px 999px 28px 28px;background:linear-gradient(180deg,var(--cs),var(--paper) 70%);text-align:center;box-shadow:0 24px 46px -30px var(--shadow);border:2px solid color-mix(in srgb,var(--c) 20%,transparent)}
+.edu li:nth-child(2) .arch{padding-top:70px}
+.edu li:nth-child(3) .arch{padding-top:96px}
+.arch i{width:64px;height:64px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;box-shadow:0 12px 24px -10px var(--c)}
+.arch i svg{width:30px;height:30px}
+.arch .when{display:block;font-size:26px;margin-bottom:8px}
+.arch p{margin:8px 0 0;font-weight:600;color:var(--mute)}
+
+/* kontak: kartu pos */
+.post{position:relative;max-width:980px;margin:0 auto;padding:12px;border-radius:26px;background:repeating-linear-gradient(135deg,var(--rose) 0 18px,var(--paper) 18px 30px,var(--lilac) 30px 48px,var(--paper) 48px 60px);box-shadow:0 30px 60px -32px var(--shadow)}
+.post .in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:0;border-radius:18px;background:var(--paper);overflow:hidden}
+.post .left{position:relative;padding:clamp(28px,4vw,46px);border-right:2px dashed var(--line)}
+.post .left .hand{font-size:clamp(46px,5.4vw,64px);color:var(--rose);transform:rotate(-3deg);display:inline-block}
+.post .left p{color:var(--mute);margin:18px 0 0;max-width:30ch}
+.stamp{position:absolute;right:22px;bottom:22px;width:86px;height:100px;padding:6px;background:var(--butter-s);border:3px dotted var(--butter);transform:rotate(6deg);display:grid;place-items:center}
+.stamp svg{width:56px;height:56px}
+.post .right{padding:clamp(20px,3vw,34px)}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{border-bottom:1.5px solid var(--line)}
+.rows li:last-child{border:0}
+.row{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 6px;text-decoration:none;color:var(--ink);border-radius:14px}
+a.row:hover{background:var(--cs)}
+.row i{flex:none;width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:var(--c);color:#fff}
+.row i svg{width:23px;height:23px}
+.row span{flex:1}
+.row small{display:block;font-size:13px;font-weight:700;color:var(--c)}
+.row b{display:block;font-weight:700;font-size:16px;overflow-wrap:anywhere}
+.copy{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--c);color:#fff;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+footer{text-align:center;color:var(--mute);font-size:14px;padding:0 16px 40px}
+footer .hand{font-size:24px;color:var(--rose)}
+
+/* gambar & lightbox */
+.thumbs{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.thumb{position:relative;width:132px;aspect-ratio:4/3;padding:0;border:4px solid #fff;border-radius:10px;overflow:hidden;cursor:zoom-in;background:#fff;box-shadow:0 10px 20px -12px var(--shadow);transform:rotate(-2deg);transition:transform .2s}
+.thumb:nth-child(2){transform:rotate(2.5deg)}
+.thumb:hover{transform:rotate(0) scale(1.05)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb span{position:absolute;right:6px;bottom:6px;padding:1px 9px;border-radius:999px;background:var(--c);color:#fff;font-size:11.5px;font-weight:700}
+.pj-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--c);background:var(--cs);color:var(--c);font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.pill:hover{background:var(--c);color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;padding:10px 6px}
+.snap{position:relative;display:block;padding:12px 12px 4px;border:0;border-radius:6px;background:#fff;box-shadow:0 22px 40px -24px var(--shadow);cursor:zoom-in;text-align:center;transition:transform .25s}
+.snap:nth-child(odd){transform:rotate(-3deg)}.snap:nth-child(even){transform:rotate(2.5deg) translateY(14px)}
+.snap:hover{transform:rotate(0) translateY(-4px) scale(1.03)}
+.snap img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.snap .hand{display:block;font-size:23px;color:#3d2148;padding:10px 0 8px}
+.snap .tape{width:80px;height:24px}.snap .tape.t1{top:-10px;left:-14px}.snap .tape.t2{top:-10px;right:-14px;left:auto}
+.win{font:inherit;color:inherit;border:0;cursor:zoom-in;display:flex;flex-direction:column;align-items:center;transition:transform .2s}
+.win:hover{transform:translateY(-4px)}
+.wimg{display:block;width:100%;aspect-ratio:4/3;margin-bottom:16px;border-radius:14px;overflow:hidden;background:var(--cs);border:4px solid var(--cs)}
+.wimg img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.win .d{display:block;margin-top:6px;font-size:14.5px;color:var(--mute);line-height:1.5}
+.see{margin-top:12px;padding:4px 14px;border-radius:999px;background:var(--cs);color:var(--c);font-size:13px;font-weight:700}
+.certs a{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.certs a svg{width:16px;height:16px;flex:none;color:var(--c)}
+.certs li:has(a):hover{background:var(--c);color:#fff}.certs li:has(a):hover small,.certs li:has(a):hover svg{color:#fff}
+.certs-note{color:var(--mute);font-size:14.5px;margin:-4px 0 14px}
+.lb{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(40,15,50,.72);backdrop-filter:blur(6px)}
+.lb[hidden]{display:none}
+.lb-card{position:relative;max-width:min(92vw,760px);padding:14px 14px 6px;background:#fff;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(-1deg)}
+.lb-card img{display:block;max-width:100%;max-height:72vh;margin:0 auto;border-radius:3px}
+.lb-card p{margin:10px 6px 8px;font-size:24px;color:#3d2148;text-align:center}
+.lb-x{position:absolute;top:-16px;right:-16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--rose);color:#fff;font-size:26px;line-height:1;cursor:pointer;box-shadow:0 8px 18px -6px var(--rose)}
+@media(max-width:960px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.thumb{width:112px}.lb-x{top:-12px;right:-8px}}
+
+.rose{--c:var(--rose);--cs:var(--rose-s)}.lilac{--c:var(--lilac);--cs:var(--lilac-s)}.butter{--c:var(--butter);--cs:var(--butter-s)}.mint{--c:var(--mint);--cs:var(--mint-s)}.sky{--c:var(--sky);--cs:var(--sky-s)}.peach{--c:var(--peach);--cs:var(--peach-s)}
+
+@media(max-width:960px){.projects,.minis,.wins{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:860px){
+  .hero .wrap,.about{grid-template-columns:minmax(0,1fr)}
+  .pola-box{width:min(84%,340px)}
+  .tl::before{left:11px}
+  .tl>li,.tl>li:nth-child(even){width:auto;margin:0;padding:0 0 26px 42px}
+  .tl>li::before,.tl>li:nth-child(even)::before{left:0;right:auto}
+  .edu{grid-template-columns:minmax(0,1fr)}.edu li .arch,.edu li:nth-child(n) .arch{padding-top:44px}
+  .post .in{grid-template-columns:minmax(0,1fr)}.post .left{border-right:0;border-bottom:2px dashed var(--line);padding-bottom:110px}
+}
+@media(max-width:600px){
+  nav .in{border-radius:26px;justify-content:center;padding:4px 8px}
+  nav ul{justify-content:center}nav ul a{padding:0 8px;font-size:13.5px;min-height:40px}
+  .hero{margin-top:-120px;padding-top:160px}
+  .projects,.minis,.wins{grid-template-columns:minmax(0,1fr)}
+  .paper{padding-left:40px}.paper p{font-size:16px}
+  .row{min-height:66px;gap:12px}.row b{font-size:14.5px}.row i{width:42px;height:42px}.copy{padding:0 12px}
+  .post .left{padding-bottom:90px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sp" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z"/></symbol>
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21Z"/></symbol>
+  <symbol id="flower" viewBox="0 0 40 40"><g><circle cx="20" cy="9" r="8"/><circle cx="31" cy="17" r="8"/><circle cx="27" cy="30" r="8"/><circle cx="13" cy="30" r="8"/><circle cx="9" cy="17" r="8"/></g><circle cx="20" cy="20" r="6" fill="#ffd36b"/></symbol>
+  <symbol id="cap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 10 12 5 2 10l10 5 10-5ZM6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="medal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M8.5 9.2 6 2h4l2 4 2-4h4l-2.5 7.2"/><path d="m12 11.5.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3Z"/></g></symbol>
+</svg>
+
+<nav aria-label="Navigasi utama">
+  <div class="in">
+    <a class="mark" href="#top">alvi<svg fill="currentColor" aria-hidden="true"><use href="#heart"/></svg></a>
+    <ul>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#pengalaman">Pengalaman</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#momen">Momen</a></li>
+      <li><a href="#pencapaian">Pencapaian</a></li>
+      <li><a href="#pendidikan">Pendidikan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="band hero" id="top">
+  <svg class="st fl" style="left:4%;top:160px;width:40px;height:40px;fill:#ffb3cf"><use href="#flower"/></svg>
+  <svg class="st fl d2" style="left:46%;top:130px;width:22px;height:22px;fill:var(--lilac)"><use href="#sp"/></svg>
+  <svg class="st fl d3" style="left:40%;bottom:70px;width:26px;height:26px;fill:var(--rose)"><use href="#heart"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="hand hi">Hai, aku</span>
+      <h1>Alvi Setya <em>Kurnia Dewi</em></h1>
+      <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="hand">dari Bojonegoro, suka jalan-jalan &amp; kuliner</span></div>
+      <div class="btns">
+        <a class="btn main lift" href="#tentang">Kenalan dulu</a>
+        <a class="btn soft lift" href="https://wa.me/6281232044165" rel="noopener"><svg aria-hidden="true" style="color:#12a07a"><use href="#wa"/></svg>Chat WhatsApp</a>
+      </div>
+    </div>
+    <div class="pola-box">
+      <div class="blob" aria-hidden="true"></div>
+      <figure class="pola" style="margin:0">
+        <span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span>
+        <img src="foto-wisuda.jpg" alt="Alvi mengenakan toga wisuda di depan tulisan Universitas Negeri Surabaya" width="640" height="848">
+        <figcaption class="cap">wisuda S1, Unesa 2026</figcaption>
+      </figure>
+      <svg class="st fl" style="right:-14px;bottom:70px;width:54px;height:54px;fill:#c9b6ff"><use href="#flower"/></svg>
+      <svg class="st fl d2" style="left:-18px;bottom:40px;width:34px;height:34px;fill:var(--butter)"><use href="#sp"/></svg>
+      <svg class="st fl d3" style="right:10px;top:-24px;width:30px;height:30px;fill:var(--rose)"><use href="#heart"/></svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="band quote-band" aria-label="Quotes favorit">
+  <svg class="st fl" style="left:8%;top:40px;width:36px;height:36px;fill:#ffb3cf"><use href="#flower"/></svg>
+  <svg class="st fl d2" style="right:9%;bottom:40px;width:24px;height:24px;fill:var(--lilac)"><use href="#sp"/></svg>
+  <figure class="quote">
+    <span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span>
+    <span class="qmark" aria-hidden="true">“</span>
+    <blockquote>A girl whose mind has been enlightened and whose horizons have been broadened can no longer live confined within old boundaries.</blockquote>
+    <figcaption><span class="hand">R.A. Kartini</span></figcaption>
+  </figure>
+</section>
+
+<section class="band" id="tentang">
+  <div class="wrap">
+    <div class="sec-head"><span class="hand">tentang aku</span><h2><span>Kenalan, yuk</span></h2></div>
+    <div class="about">
+      <div class="paper">
+        <p>Halo! Saya Alvi, anak Bojonegoro kelahiran 24 April 2004 yang hobi jalan-jalan dan berburu kuliner.</p>
+        <p>Selama kuliah S1 Teknik Informatika di Universitas Negeri Surabaya, saya magang sebagai Mobile Apps Developer lewat program MSIB di BPSDM Kementerian Kominfo, menjadi Data Scientist di iLC Learning Center, dan mengikuti Coding Camp powered by DBS Foundation jalur Machine Learning. Bersama tim PKM, saya juga membuat Ethno Brain, game belajar matematika untuk anak dengan diskalkulia.</p>
+        <p>Di luar kuliah dan coding, saya paling senang traveling ke tempat baru dan mencoba kuliner di setiap tempat yang saya datangi. Sekarang saya sedang menempuh S2 Teknik Informatika di Institut Teknologi Sepuluh Nopember.</p>
+      </div>
+      <div class="stickers">
+        <div class="stk rose"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 21v-1a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v1"/><circle cx="12" cy="7" r="4"/></svg></i><span><small>Nama lengkap</small><b>Alvi Setya Kurnia Dewi</b></span></div>
+        <div class="stk butter"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></i><span><small>Tempat, tanggal lahir</small><b>Bojonegoro, 24 April 2004</b></span></div>
+        <div class="stk sky"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2Z"/></svg></i><span><small>Hobi</small><b>Traveling ke tempat baru</b></span></div>
+        <div class="stk mint"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></i><span><small>Hobi</small><b>Berburu kuliner</b></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="pengalaman" style="background:linear-gradient(180deg,transparent,var(--lilac-s) 12%,var(--lilac-s) 88%,transparent)">
+  <svg class="st fl" style="right:6%;top:90px;width:44px;height:44px;fill:#ffb3cf"><use href="#flower"/></svg>
+  <div class="wrap">
+    <div class="sec-head center" style="--c:var(--lilac)"><span class="hand" style="color:var(--lilac)">perjalananku</span><h2><span>Pengalaman</span></h2></div>
+    <ol class="tl">
+      <li class="lilac"><div class="card"><span class="date">Jan – Jul 2025</span><h3>Machine Learning Cohort</h3><p class="org">Coding Camp powered by DBS Foundation</p><p>Menyelesaikan jalur Machine Learning Engineer dari Dicoding × DBS Foundation dengan nilai akhir A.</p><ul class="tags"><li>Python</li><li>SQL</li><li>Machine learning</li></ul><div class="thumbs"><button class="thumb" type="button" data-img="img/sert-codingcamp.jpg" data-cap="Certificate of Completion, Coding Camp powered by DBS Foundation"><img src="img/sert-codingcamp.jpg" alt="Sertifikat Coding Camp" loading="eager"><span>lihat</span></button></div></div></li>
+      <li class="sky"><div class="card"><span class="date">Feb – Mei 2025</span><h3>Data Scientist</h3><p class="org">iLC Learning Center, program MSIB VINIX7 Batch 2</p><p>Magang di divisi Junior Data Scientist: mengolah data dan membuat dashboard business intelligence dengan Looker Studio.</p><ul class="tags"><li>Data science</li><li>Looker Studio</li></ul><div class="thumbs"><button class="thumb" type="button" data-img="img/sert-msib-ilc.jpg" data-cap="Sertifikat Magang dan Studi Independen, MSIB VINIX7 Batch 2"><img src="img/sert-msib-ilc.jpg" alt="Sertifikat MSIB VINIX7" loading="eager"><span>lihat</span></button><button class="thumb" type="button" data-img="img/sert-vinix.jpg" data-cap="Sertifikat Magang Divisi Data Sains, PT Vinix Seven Aurum"><img src="img/sert-vinix.jpg" alt="Sertifikat magang Vinix7" loading="eager"><span>lihat</span></button></div></div></li>
+      <li class="rose"><div class="card"><span class="date">Sep – Des 2024</span><h3>Mobile Apps Developer</h3><p class="org">Magang MSIB Batch 7, BPSDM Kementerian Kominfo</p><p>Mengembangkan aplikasi SERASI untuk antisipasi risiko stunting pada bayi, bersama tim dan RSUD Dr. Soetomo.</p><ul class="tags"><li>Flutter</li><li>Laravel</li></ul><div class="thumbs"><button class="thumb" type="button" data-img="img/sert-msib-bpsdm.jpg" data-cap="Sertifikat MSIB Angkatan 7, BPSDM Kementerian Komunikasi dan Digital"><img src="img/sert-msib-bpsdm.jpg" alt="Sertifikat MSIB BPSDM" loading="eager"><span>lihat</span></button></div></div></li>
+      <li class="butter"><div class="card"><span class="date">Jan – Agt 2024</span><h3>Pekan Kreativitas Mahasiswa</h3><p class="org">PKM Riset Sosial Humaniora, Kemdiktisaintek</p><p>Mendapat pendanaan Ditjen Diktiristek untuk mengembangkan game edukasi Ethno Brain.</p><ul class="tags"><li>Game development</li></ul><div class="thumbs"><button class="thumb" type="button" data-img="img/pkm-dokumentasi.jpg" data-cap="Dokumentasi penelitian PKM: uji coba Ethno Brain di sekolah"><img src="img/pkm-dokumentasi.jpg" alt="Dokumentasi penelitian PKM" loading="eager"><span>lihat</span></button></div></div></li>
+      <li class="mint"><div class="card"><span class="date">Mei 2024</span><h3>Studi Visit BEM FT UNESA × BEM FT UMM</h3><p class="org">BEM FT UNESA, Malang</p><p>Kegiatan studi visit yang diselenggarakan Departemen Luar Negeri BEM FT UNESA.</p><div class="thumbs"><button class="thumb" type="button" data-img="img/studivisit-1.jpg" data-cap="Foto bersama Studi Visit BEM FT UNESA × BEM FT UMM"><img src="img/studivisit-1.jpg" alt="Foto bersama studi visit" loading="eager"><span>lihat</span></button><button class="thumb" type="button" data-img="img/studivisit-2.jpg" data-cap="Diskusi saat Studi Visit di Malang"><img src="img/studivisit-2.jpg" alt="Diskusi studi visit" loading="eager"><span>lihat</span></button></div></div></li>
+      <li class="peach"><div class="card"><span class="date">Mei 2023</span><h3>LKMM Tingkat Dasar</h3><p class="org">Universitas Negeri Surabaya</p><p>Pelatihan keterampilan manajemen mahasiswa: perencanaan, kepemimpinan, dan pengelolaan organisasi.</p><div class="thumbs"><button class="thumb" type="button" data-img="img/lkmm.jpg" data-cap="Foto bersama peserta LKMM-TD 2023"><img src="img/lkmm.jpg" alt="Foto bersama LKMM-TD" loading="eager"><span>lihat</span></button></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="proyek">
+  <svg class="st fl d2" style="left:3%;top:110px;width:30px;height:30px;fill:var(--butter)"><use href="#sp"/></svg>
+  <div class="wrap">
+    <div class="sec-head" style="--c:var(--mint)"><span class="hand" style="color:var(--mint)">karya-karyaku</span><h2><span>Proyek</span></h2></div>
+    <div class="projects">
+      <article class="pj mint">
+        <div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><circle cx="100" cy="65" r="56" fill="var(--paper)" opacity=".7"/><rect x="72" y="12" width="56" height="106" rx="12" fill="var(--c)"/><rect x="78" y="22" width="44" height="86" rx="5" fill="#fff"/><path d="M84 94 C92 90 98 78 105 68 C109 62 113 56 116 50" fill="none" stroke="#ec4f8b" stroke-width="4" stroke-linecap="round"/><svg x="96" y="56" width="18" height="18" fill="#ec4f8b"><use href="#heart"/></svg><svg x="22" y="18" width="30" height="30" fill="#ffb3cf"><use href="#flower"/></svg><svg x="152" y="84" width="20" height="20" fill="#d99a00"><use href="#sp"/></svg></svg></div>
+        <div class="body"><span class="when">Sep – Des 2024</span><h3>SERASI</h3><p class="kind">Soetomo Early Risk Anticipation of Stunting Infant</p><p>Aplikasi mobile dan web untuk membantu mencegah stunting pada bayi berisiko tinggi, dikembangkan bersama tim magang MSIB dan RSUD Dr. Soetomo.</p><ul class="tags"><li>Flutter</li><li>Laravel</li></ul></div>
+      </article>
+      <article class="pj lilac">
+        <div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><g font-family="Playfair Display,serif" font-size="30" font-weight="600" text-anchor="middle"><rect x="30" y="34" width="44" height="44" rx="14" fill="#ec4f8b" transform="rotate(-8 52 56)"/><text x="52" y="66" fill="#fff">1</text><rect x="80" y="54" width="44" height="44" rx="14" fill="var(--c)"/><text x="102" y="86" fill="#fff">2</text><rect x="130" y="26" width="44" height="44" rx="14" fill="#d99a00" transform="rotate(8 152 48)"/><text x="152" y="58" fill="#fff">3</text></g><svg x="150" y="86" width="24" height="24" fill="#12a07a"><use href="#sp"/></svg><svg x="28" y="92" width="26" height="26" fill="#ffb3cf"><use href="#flower"/></svg></svg></div>
+        <div class="body"><span class="when">Apr – Sep 2024</span><h3>Ethno Brain</h3><p class="kind">Game belajar matematika untuk anak diskalkulia</p><p>Game edukasi hasil PKM yang didanai Ditjen Diktiristek dan sudah tercatat hak ciptanya.</p><ul class="tags"><li>Game development</li><li>Pendidikan inklusif</li></ul><div class="pj-btns"><button class="pill" type="button" data-img="img/pkm-dokumentasi.jpg" data-cap="Uji coba Ethno Brain bersama siswa">Foto penelitian</button><button class="pill" type="button" data-img="img/hakcipta.jpg" data-cap="Surat Pencatatan Ciptaan Ethno Brain">Surat hak cipta</button></div></div>
+      </article>
+      <article class="pj butter">
+        <div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><path d="M12 112 C60 100 80 70 120 64 C150 60 170 42 188 32" fill="none" stroke="var(--c)" stroke-width="14" stroke-linecap="round"/><path d="M12 112 C60 100 80 70 120 64 C150 60 170 42 188 32" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 8"/><g fill="#ec4f8b"><circle cx="58" cy="97" r="7"/><circle cx="96" cy="74" r="7"/><circle cx="140" cy="59" r="7"/></g><path d="M176 8 V38" stroke="#3d2148" stroke-width="3"/><path d="M176 8 L196 14 L176 20Z" fill="#8a62f0"/><svg x="24" y="18" width="30" height="30" fill="#c9b6ff"><use href="#flower"/></svg></svg></div>
+        <div class="body"><h3>Ethno Run</h3><p class="kind">Game</p></div>
+      </article>
+    </div>
+    <div class="minis">
+      <article class="mini lilac"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M12 12v9M8 17l4 4 4-4"/></svg></i><div><span class="when">Apr – Jun 2025</span><h3>Ansaju: Anti Salah Jurusan</h3><p>Proyek machine learning dengan algoritma Random Forest.</p><ul class="tags"><li>Random Forest</li></ul></div></article>
+      <article class="mini sky"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 15v-3M12 15V8M16 15v-5"/></svg></i><div><span class="when">Jan – Mei 2025</span><h3>Dashboard BI</h3><p>Dashboard business intelligence dengan Looker Studio di iLC Learning Center.</p><ul class="tags"><li>Looker Studio</li></ul></div></article>
+      <article class="mini rose"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2V5Z"/><path d="M8 7h6M8 11h4"/></svg></i><div><span class="when">Nov 2024 – Jan 2025</span><h3>Mathematics Novel Visual</h3><p>Visual novel bertema matematika.</p></div></article>
+      <article class="mini butter"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></i><div><span class="when">Jul – Okt 2024</span><h3>Aplikasi Panda</h3></div></article>
+      <article class="mini mint"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></i><div><span class="when">Sep – Okt 2023</span><h3>Website Pendidikan (Zenius)</h3><p>Proyek website bertema pendidikan.</p></div></article>
+      <article class="mini peach"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></svg></i><div><span class="when">Coding Camp DBS</span><h3>Analisis Data Kualitas Udara</h3><p>Analisis data dengan Python menggunakan dataset kualitas udara.</p><ul class="tags"><li>Python</li><li>Anaconda</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="momen">
+  <div class="wrap">
+    <div class="sec-head center" style="--c:var(--peach)"><span class="hand" style="color:var(--peach)">kenangan</span><h2><span>Momen berkesan</span></h2></div>
+    <div class="gallery">
+      <button class="snap" type="button" data-img="img/pkm-dokumentasi.jpg" data-cap="Penelitian PKM: uji coba game Ethno Brain bersama siswa"><span class="tape t1" aria-hidden="true"></span><img src="img/pkm-dokumentasi.jpg" alt="Kolase dokumentasi penelitian PKM di sekolah"><span class="hand">penelitian PKM, 2024</span></button>
+      <button class="snap" type="button" data-img="img/studivisit-1.jpg" data-cap="Studi Visit BEM FT UNESA × BEM FT UMM, Mei 2024"><span class="tape t2" aria-hidden="true"></span><img src="img/studivisit-1.jpg" alt="Foto bersama di depan Fakultas Teknik Unesa"><span class="hand">studi visit BEM FT</span></button>
+      <button class="snap" type="button" data-img="img/studivisit-2.jpg" data-cap="Diskusi saat Studi Visit di Malang"><span class="tape t1" aria-hidden="true"></span><img src="img/studivisit-2.jpg" alt="Diskusi duduk melingkar saat studi visit"><span class="hand">diskusi di Malang</span></button>
+      <button class="snap" type="button" data-img="img/lkmm.jpg" data-cap="LKMM Tingkat Dasar Unesa, Mei 2023"><span class="tape t2" aria-hidden="true"></span><img src="img/lkmm.jpg" alt="Foto bersama peserta LKMM-TD"><span class="hand">LKMM-TD 2023</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="pencapaian" style="background:linear-gradient(180deg,transparent,var(--butter-s) 12%,var(--butter-s) 88%,transparent)">
+  <svg class="st fl d3" style="right:5%;top:100px;width:40px;height:40px;fill:#c9b6ff"><use href="#flower"/></svg>
+  <div class="wrap">
+    <div class="sec-head center" style="--c:var(--butter)"><span class="hand" style="color:var(--butter)">alhamdulillah</span><h2><span>Pencapaian</span></h2></div>
+    <div class="wins">
+      <button class="win rose" type="button" data-img="img/hakcipta.jpg" data-cap="Surat Pencatatan Ciptaan game Ethno Brain"><span class="wimg"><img src="img/hakcipta.jpg" alt="Surat Pencatatan Ciptaan Ethno Brain"></span><b>Hak cipta</b><span class="d">Game Ethno Brain tercatat di Surat Pencatatan Ciptaan</span><span class="see">Lihat dokumen</span></button>
+      <button class="win butter" type="button" data-img="img/pkm-dokumentasi.jpg" data-cap="Dokumentasi penelitian PKM yang didanai Ditjen Diktiristek"><span class="wimg"><img src="img/pkm-dokumentasi.jpg" alt="Dokumentasi penelitian PKM"></span><b>Pendanaan PKM</b><span class="d">Didanai Ditjen Diktiristek untuk proyek Ethno Brain, 2024</span><span class="see">Lihat foto</span></button>
+      <button class="win lilac" type="button" data-img="img/sert-codingcamp.jpg" data-cap="Certificate of Completion, Coding Camp powered by DBS Foundation"><span class="wimg"><img src="img/sert-codingcamp.jpg" alt="Sertifikat Coding Camp"></span><b>Nilai A</b><span class="d">Coding Camp 2025, jalur Machine Learning Engineer</span><span class="see">Lihat sertifikat</span></button>
+      <button class="win sky" type="button" data-img="img/toefl.jpg" data-cap="TOEFL ITP Certificate of Achievement, skor 610"><span class="wimg"><img src="img/toefl.jpg" alt="Sertifikat TOEFL ITP"></span><b>TOEFL ITP 610</b><span class="d">Skor kemampuan bahasa Inggris</span><span class="see">Lihat sertifikat</span></button>
+    </div>
+    <span class="hand certs-h">sertifikat</span><p class="certs-note">Klik sertifikat Dicoding untuk melihat kredensial resminya.</p>
+    <ul class="certs">
+      <li class="mint"><a href="https://www.dicoding.com/certificates/1OP82Q4ELPQK" rel="noopener"><span>Machine Learning Terapan<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="lilac"><a href="https://www.dicoding.com/certificates/RVZKW39KOZD5" rel="noopener"><span>Belajar Pengembangan Machine Learning<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="rose"><a href="https://www.dicoding.com/certificates/2VX3KDWRJXYQ" rel="noopener"><span>Belajar Fundamental Pemrosesan Data<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="sky"><a href="https://www.dicoding.com/certificates/N9ZO29VQRPG5" rel="noopener"><span>Belajar Dasar Data Science<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="peach"><a href="https://www.dicoding.com/certificates/98XWEYWG0XM3" rel="noopener"><span>Belajar Machine Learning untuk Pemula<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="mint"><a href="https://www.dicoding.com/certificates/NVP75EL6OXR0" rel="noopener"><span>Belajar Dasar Cloud dan Gen AI di AWS<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="lilac"><a href="https://www.dicoding.com/certificates/NVP75VWVWXR0" rel="noopener"><span>Financial Literacy 101<small>Dicoding · lihat kredensial</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
+      <li class="rose">Menerapkan Rekayasa Prompt dengan Azure OpenAI Service<small>Digital Talent Scholarship</small></li>
+      <li class="sky">Menskalakan AI di Organisasi<small>Digital Talent Scholarship</small></li>
+      <li class="peach">AWS Knowledge: Cloud Essentials<small>Amazon Web Services</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="pendidikan">
+  <div class="wrap">
+    <div class="sec-head center" style="--c:var(--sky)"><span class="hand" style="color:var(--sky)">tempatku belajar</span><h2><span>Pendidikan</span></h2></div>
+    <ol class="edu">
+      <li class="butter"><div class="arch"><i><svg aria-hidden="true"><use href="#cap"/></svg></i><span class="when">lulus 2022</span><h3>SMAN Model Terpadu Bojonegoro</h3><p>Sekolah menengah atas</p></div></li>
+      <li class="mint"><div class="arch"><i><svg aria-hidden="true"><use href="#cap"/></svg></i><span class="when">lulus 2026</span><h3>Universitas Negeri Surabaya</h3><p>S1 Teknik Informatika</p></div></li>
+      <li class="lilac"><div class="arch"><i><svg aria-hidden="true"><use href="#cap"/></svg></i><span class="when">2026 – sekarang</span><h3>Institut Teknologi Sepuluh Nopember</h3><p>S2 Teknik Informatika</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="kontak">
+  <div class="post">
+    <div class="in">
+      <div class="left">
+        <span class="hand">Yuk, terhubung!</span>
+        <div class="stamp" aria-hidden="true"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#ffb3cf"/><svg x="12" y="12" width="36" height="36" fill="#ec4f8b"><use href="#heart"/></svg></svg></div>
+      </div>
+      <div class="right">
+        <ul class="rows">
+          <li><a class="row mint" href="https://wa.me/6281232044165" rel="noopener"><i><svg aria-hidden="true"><use href="#wa"/></svg></i><span><small>WhatsApp</small><b>0812-3204-4165</b></span></a></li>
+          <li><div class="row rose"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg></i><span><small>Email</small><b id="mail">alfisetya66@gmail.com</b></span><button class="copy" type="button" data-copy="mail">Salin</button></div></li>
+          <li><a class="row lilac" href="https://www.instagram.com/alvisetyaa1511" rel="noopener"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></i><span><small>Instagram</small><b>@alvisetyaa1511</b></span></a></li>
+          <li><a class="row sky" href="https://www.linkedin.com/in/alvi-setya" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg></i><span><small>LinkedIn</small><b>in/alvi-setya</b></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Pratinjau gambar">
+  <div class="lb-card"><button class="lb-x" type="button" aria-label="Tutup">×</button><img id="lbimg" alt=""><p id="lbcap" class="hand"></p></div>
+</div>
+
+<footer><span class="hand">dibuat dengan sepenuh hati</span><br>© <span id="yr">2026</span> Alvi Setya Kurnia Dewi</footer>
+
+<script>
+{
+  const lb = document.getElementById('lb'), li = document.getElementById('lbimg'), lc = document.getElementById('lbcap');
+  let last = null;
+  const open = el => { last = el; li.src = el.dataset.img; li.alt = el.dataset.cap; lc.textContent = el.dataset.cap; lb.hidden = false; lb.querySelector('.lb-x').focus(); };
+  const close = () => { lb.hidden = true; li.removeAttribute('src'); if (last) last.focus(); };
+  for (const el of document.querySelectorAll('[data-img]')) el.addEventListener('click', () => open(el));
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.closest('.lb-x')) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !lb.hidden) close(); });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  for (const b of document.querySelectorAll('.copy')) b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = 'Tersalin'; }
+    catch (e) { b.textContent = 'Salin manual'; }
+    setTimeout(() => { b.textContent = 'Salin'; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
