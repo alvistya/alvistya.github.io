@@ -128,6 +128,23 @@ nav ul a:hover{background:var(--rose-s);color:var(--rose)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0}
 .tags li{font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:999px;background:var(--cs);color:var(--c)}
 
+/* publikasi */
+.pubs{display:grid;gap:24px;max-width:1000px;margin:0 auto}
+.pub{position:relative;display:flex;border-radius:22px;background:var(--paper);overflow:hidden;box-shadow:0 24px 46px -30px var(--shadow)}
+.pub:nth-child(1){transform:rotate(-.5deg)}.pub:nth-child(2){transform:rotate(.5deg)}
+.spine{flex:none;width:18px;background:repeating-linear-gradient(180deg,var(--c) 0 26px,color-mix(in srgb,var(--c) 70%,#fff) 26px 30px)}
+.pub-body{padding:26px clamp(22px,3vw,36px) 26px}
+.pub h3{font-size:clamp(19px,2vw,23px);line-height:1.3;margin-top:6px}
+.authors{margin:12px 0 0;color:var(--mute);font-size:15px}
+.authors mark{background:linear-gradient(transparent 55%,color-mix(in srgb,var(--c) 30%,transparent) 55%);color:var(--ink);font-weight:700;padding:0 2px}
+.journal{margin:6px 0 0;font-size:15px}
+.pub-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px}
+.read{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;background:var(--c);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:0 10px 20px -10px var(--c)}
+.read:hover{transform:translateY(-2px)}
+.read svg{width:16px;height:16px}
+.doi{font-size:13px;color:var(--mute);overflow-wrap:anywhere}
+a.pill{display:inline-flex;align-items:center;text-decoration:none}
+
 /* organisasi */
 .orgs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:980px;margin:0 auto}
 .org-card{position:relative;padding:40px 32px 34px;border-radius:30px;text-align:center;background:linear-gradient(170deg,var(--cs),var(--paper) 75%);border:2px solid color-mix(in srgb,var(--c) 22%,transparent);box-shadow:0 26px 50px -30px var(--shadow)}
@@ -252,7 +269,8 @@ footer .hand{font-size:24px;color:var(--rose)}
 }
 @media(max-width:600px){
   nav .in{border-radius:26px;justify-content:center;padding:4px 8px}
-  nav ul{justify-content:center}nav ul a{padding:0 8px;font-size:13.5px;min-height:40px}
+  nav .in{display:block;text-align:center;padding:2px 6px 4px}.mark{justify-content:center;min-height:38px;font-size:26px}
+  nav ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;justify-content:flex-start;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}nav ul::-webkit-scrollbar{display:none}nav ul li{flex:none}nav ul a{padding:0 10px;font-size:13.5px;min-height:38px;white-space:nowrap}
   .hero{margin-top:-120px;padding-top:160px}
   .projects,.minis,.wins{grid-template-columns:minmax(0,1fr)}
   .paper{padding-left:40px}.paper p{font-size:16px}
@@ -280,7 +298,7 @@ footer .hand{font-size:24px;color:var(--rose)}
       <li><a href="#pengalaman">Pengalaman</a></li>
       <li><a href="#organisasi">Organisasi</a></li>
       <li><a href="#proyek">Proyek</a></li>
-      <li><a href="#momen">Momen</a></li>
+      <li><a href="#publikasi">Publikasi</a></li>
       <li><a href="#pencapaian">Pencapaian</a></li>
       <li><a href="#pendidikan">Pendidikan</a></li>
       <li><a href="#kontak">Kontak</a></li>
@@ -401,7 +419,7 @@ footer .hand{font-size:24px;color:var(--rose)}
       </article>
       <article class="pj butter">
         <div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><path d="M12 112 C60 100 80 70 120 64 C150 60 170 42 188 32" fill="none" stroke="var(--c)" stroke-width="14" stroke-linecap="round"/><path d="M12 112 C60 100 80 70 120 64 C150 60 170 42 188 32" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 8"/><g fill="#ec4f8b"><circle cx="58" cy="97" r="7"/><circle cx="96" cy="74" r="7"/><circle cx="140" cy="59" r="7"/></g><path d="M176 8 V38" stroke="#3d2148" stroke-width="3"/><path d="M176 8 L196 14 L176 20Z" fill="#8a62f0"/><svg x="24" y="18" width="30" height="30" fill="#c9b6ff"><use href="#flower"/></svg></svg></div>
-        <div class="body"><h3>Ethno Run</h3><p class="kind">Game</p></div>
+        <div class="body"><h3>Ethno Run</h3><p class="kind">Game matematika adaptif untuk siswa kelas 3–5 SD</p><p>Game edukasi mobile yang memakai algoritma Bayesian Knowledge Tracing supaya materi menyesuaikan kemampuan tiap siswa. Sudah terbit di jurnal Modem, 2026.</p><ul class="tags"><li>Game mobile</li><li>Bayesian Knowledge Tracing</li></ul><div class="pj-btns"><a class="pill" href="https://doi.org/10.62951/modem.v4i1.776" rel="noopener">Baca publikasi</a></div></div>
       </article>
     </div>
     <div class="minis">
@@ -411,6 +429,35 @@ footer .hand{font-size:24px;color:var(--rose)}
       <article class="mini butter"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></i><div><span class="when">Jul – Okt 2024</span><h3>Aplikasi Panda</h3></div></article>
       <article class="mini mint"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></i><div><span class="when">Sep – Okt 2023</span><h3>Website Pendidikan (Zenius)</h3><p>Proyek website bertema pendidikan.</p></div></article>
       <article class="mini peach"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></svg></i><div><span class="when">Coding Camp DBS</span><h3>Analisis Data Kualitas Udara</h3><p>Analisis data dengan Python menggunakan dataset kualitas udara.</p><ul class="tags"><li>Python</li><li>Anaconda</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="publikasi" style="background:linear-gradient(180deg,transparent,var(--sky-s) 12%,var(--sky-s) 88%,transparent)">
+  <svg class="st fl" style="right:6%;top:96px;width:40px;height:40px;fill:#ffb3cf"><use href="#flower"/></svg>
+  <div class="wrap">
+    <div class="sec-head center" style="--c:var(--sky)"><span class="hand" style="color:var(--sky)">karya tulisku</span><h2><span>Publikasi</span></h2></div>
+    <div class="pubs">
+      <article class="pub lilac">
+        <div class="spine" aria-hidden="true"></div>
+        <div class="pub-body">
+          <span class="when">2026</span>
+          <h3>Penerapan Bayesian Knowledge Tracing pada Game Ethno Run sebagai Media Pembelajaran Matematika Adaptif untuk Siswa Kelas 3-5 Sekolah Dasar</h3>
+          <p class="authors"><mark>Alvi Setya Kurnia Dewi</mark>, Anita Qoiriah</p>
+          <p class="journal"><em>Modem: Jurnal Informatika dan Sains Teknologi</em>, Vol. 4 No. 1, Januari 2026</p>
+          <div class="pub-foot"><a class="read" href="https://doi.org/10.62951/modem.v4i1.776" rel="noopener">Baca artikel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><span class="doi">DOI 10.62951/modem.v4i1.776</span></div>
+        </div>
+      </article>
+      <article class="pub rose">
+        <div class="spine" aria-hidden="true"></div>
+        <div class="pub-body">
+          <span class="when">2024</span>
+          <h3>Validitas Game Edukatif Terintegrasi Audio-Augmented Reality untuk Meningkatkan Literasi Matematis Siswa Diskalkulia</h3>
+          <p class="authors">Nova Febrian Alfianita, Fadilla Afsari, <mark>Alvi Setya Kurnia Dewi</mark>, Nabila Neva Rahmawati, Tazkiyatun Nafis, Yurizka Melia Sari</p>
+          <p class="journal"><em>MATHEdunesa</em>, Vol. 13 No. 3, 2024</p>
+          <div class="pub-foot"><a class="read" href="https://doi.org/10.26740/mathedunesa.v13n3.p765-778" rel="noopener">Baca artikel<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a><span class="doi">DOI 10.26740/mathedunesa.v13n3.p765-778</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
